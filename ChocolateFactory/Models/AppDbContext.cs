@@ -102,7 +102,7 @@ namespace ChocolateFactory.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("your_connection_string_here");
+                optionsBuilder.UseSqlServer("Server=VH_LVH;Database=AdventureWorks2022;;Integrated Security=true;");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

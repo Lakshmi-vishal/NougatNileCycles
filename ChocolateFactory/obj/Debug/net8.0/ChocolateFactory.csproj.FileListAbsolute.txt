@@ -260,3 +260,12 @@ C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\M
 C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.JSInterop.dll
 C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\obj\Debug\net8.0\ChocolateFactory.sourcelink.json
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\launchsettings.json
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\obj\Debug\net8.0\ChocolateFactory.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\ChocolateFactory.xml
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\obj\Debug\net8.0\ChocolateFactory.xml
