@@ -259,3 +259,4 @@ C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\M
 C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\laksh\source\repos\ChocolateFactory\ChocolateFactory\obj\Debug\net8.0\ChocolateFactory.sourcelink.json

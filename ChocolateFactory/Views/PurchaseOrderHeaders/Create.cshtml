@@ -1,0 +1,50 @@
+﻿@model ChocolateFactory.Models.PurchaseOrderHeader
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PurchaseOrderHeader</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RevisionNumber" class="control-label"></label>
+                <input asp-for="RevisionNumber" class="form-control" />
+                <span asp-validation-for="RevisionNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <select asp-for="EmployeeId" class ="form-control" asp-items="ViewBag.EmployeeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorId" class="control-label"></label>
+                <select asp-for="VendorId" class ="form-control" asp-items="ViewBag.VendorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipMethodId" class="control-label"></label>
+                <select asp-for="ShipMethodId" class ="form-control" asp-items="ViewBag.ShipMethodId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipDate" class="control-label"></label>
+                <input asp-for="ShipDate" class="form-control" />
+                <span asp-validation-for="ShipDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

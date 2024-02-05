@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ChocolateFactory.Models.ProductVendor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AverageLeadTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StandardPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastReceiptCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastReceiptDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinOrderQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxOrderQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OnOrderQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessEntity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitMeasureCodeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AverageLeadTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StandardPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastReceiptCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastReceiptDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinOrderQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxOrderQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OnOrderQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessEntity.BusinessEntityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitMeasureCodeNavigation.UnitMeasureCode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
