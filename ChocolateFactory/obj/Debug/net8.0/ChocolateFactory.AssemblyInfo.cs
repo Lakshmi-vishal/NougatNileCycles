@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChocolateFactory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46a33f9adb5cd975b4cea5dfea23484641bd441e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1002df7369a53e5f08f034fcceb729a09c76d601")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChocolateFactory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChocolateFactory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

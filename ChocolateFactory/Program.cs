@@ -55,12 +55,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 // Apply CORS policy
-app.UseCors("AllowSpecificOrigins");
+
 
 app.UseAuthorization();
 
 // Map controllers and Razor Pages (if used)
 app.MapControllers();
 app.MapRazorPages(); // If you're using Razor Pages
+app.UseCors("OpenCorsPolicy");
 
 app.Run();

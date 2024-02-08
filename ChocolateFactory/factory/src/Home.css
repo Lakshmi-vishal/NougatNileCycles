@@ -1,0 +1,53 @@
+﻿/* Home.css */
+
+/* Ensure the AppBar's Toolbar is a flex container to align items */
+.Toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.lögo {
+    flex-grow: 1;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+    /* Additional styling to ensure buttons are spaced nicely */
+    .nav .Button {
+        margin-left: 10px;
+    }
+
+/* Ensures the content is centered and has some padding */
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.headline {
+    margin-bottom: 20px;
+}
+.content-grid .subheading {
+    margin-bottom: 60px;
+}
+.cta-button {
+    margin-top: 70px;
+}
+.responsive-image {
+    object-fit:contain;
+    width:auto;
+    height: 500px;
+    margin-top:30px;
+}
