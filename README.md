@@ -26,6 +26,7 @@ Additional visual components that enhance the overall user experience, including
 ![nougrat](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/c420c596-7a7c-4586-946f-03b919676ae7)
 ![feature](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/bb910760-4e0b-4bad-ac15-ae6b07586737)
 ![products](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/58cf2ada-a704-4066-b4b3-7d692df712fc)
+![availability](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/64b92c3b-c88f-4e41-ab0a-68e03e98c379)
 
 ## Getting Started
 
