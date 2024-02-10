@@ -1,0 +1,2695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NNFactory</name>
+    </assembly>
+    <members>
+        <member name="T:ChocolateFactory.Migrations.NewInitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ChocolateFactory.Migrations.NewInitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChocolateFactory.Migrations.NewInitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChocolateFactory.Migrations.NewInitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ChocolateFactory.Models.Address">
+            <summary>
+            Street address information for customers, employees, and vendors.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.AddressId">
+            <summary>
+            Primary key for Address records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.AddressLine1">
+            <summary>
+            First street address line.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.AddressLine2">
+            <summary>
+            Second street address line.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.City">
+            <summary>
+            Name of the city.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.StateProvinceId">
+            <summary>
+            Unique identification number for the state or province. Foreign key to StateProvince table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.PostalCode">
+            <summary>
+            Postal code for the street address.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Address.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.AddressType">
+            <summary>
+            Types of addresses stored in the Address table. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AddressType.AddressTypeId">
+            <summary>
+            Primary key for AddressType records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AddressType.Name">
+            <summary>
+            Address type description. For example, Billing, Home, or Shipping.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AddressType.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AddressType.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.AwbuildVersion">
+            <summary>
+            Current version number of the AdventureWorks 2016 sample database. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AwbuildVersion.SystemInformationId">
+            <summary>
+            Primary key for AWBuildVersion records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AwbuildVersion.DatabaseVersion">
+            <summary>
+            Version number of the database in 9.yy.mm.dd.00 format.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AwbuildVersion.VersionDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.AwbuildVersion.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.BillOfMaterial">
+            <summary>
+            Items required to make bicycles and bicycle subassemblies. It identifies the heirarchical relationship between a parent product and its components.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.BillOfMaterialsId">
+            <summary>
+            Primary key for BillOfMaterials records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.ProductAssemblyId">
+            <summary>
+            Parent product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.ComponentId">
+            <summary>
+            Component identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.StartDate">
+            <summary>
+            Date the component started being used in the assembly item.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.EndDate">
+            <summary>
+            Date the component stopped being used in the assembly item.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.UnitMeasureCode">
+            <summary>
+            Standard code identifying the unit of measure for the quantity.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.Bomlevel">
+            <summary>
+            Indicates the depth the component is from its parent (AssemblyID).
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.PerAssemblyQty">
+            <summary>
+            Quantity of the component needed to create the assembly.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BillOfMaterial.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.BusinessEntity">
+            <summary>
+            Source of the ID that connects vendors, customers, and employees with address and contact information.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntity.BusinessEntityId">
+            <summary>
+            Primary key for all customers, vendors, and employees.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntity.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntity.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.BusinessEntityAddress">
+            <summary>
+            Cross-reference table mapping customers, vendors, and employees to their addresses.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityAddress.BusinessEntityId">
+            <summary>
+            Primary key. Foreign key to BusinessEntity.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityAddress.AddressId">
+            <summary>
+            Primary key. Foreign key to Address.AddressID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityAddress.AddressTypeId">
+            <summary>
+            Primary key. Foreign key to AddressType.AddressTypeID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityAddress.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityAddress.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.BusinessEntityContact">
+            <summary>
+            Cross-reference table mapping stores, vendors, and employees to people
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityContact.BusinessEntityId">
+            <summary>
+            Primary key. Foreign key to BusinessEntity.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityContact.PersonId">
+            <summary>
+            Primary key. Foreign key to Person.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityContact.ContactTypeId">
+            <summary>
+            Primary key.  Foreign key to ContactType.ContactTypeID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityContact.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.BusinessEntityContact.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ContactType">
+            <summary>
+            Lookup table containing the types of business entity contacts.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ContactType.ContactTypeId">
+            <summary>
+            Primary key for ContactType records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ContactType.Name">
+            <summary>
+            Contact type description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ContactType.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.CountryRegion">
+            <summary>
+            Lookup table containing the ISO standard codes for countries and regions.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CountryRegion.CountryRegionCode">
+            <summary>
+            ISO standard code for countries and regions.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CountryRegion.Name">
+            <summary>
+            Country or region name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CountryRegion.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.CountryRegionCurrency">
+            <summary>
+            Cross-reference table mapping ISO currency codes to a country or region.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CountryRegionCurrency.CountryRegionCode">
+            <summary>
+            ISO code for countries and regions. Foreign key to CountryRegion.CountryRegionCode.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CountryRegionCurrency.CurrencyCode">
+            <summary>
+            ISO standard currency code. Foreign key to Currency.CurrencyCode.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CountryRegionCurrency.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.CreditCard">
+            <summary>
+            Customer credit card information.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CreditCard.CreditCardId">
+            <summary>
+            Primary key for CreditCard records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CreditCard.CardType">
+            <summary>
+            Credit card name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CreditCard.CardNumber">
+            <summary>
+            Credit card number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CreditCard.ExpMonth">
+            <summary>
+            Credit card expiration month.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CreditCard.ExpYear">
+            <summary>
+            Credit card expiration year.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CreditCard.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Culture">
+            <summary>
+            Lookup table containing the languages in which some AdventureWorks data is stored.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Culture.CultureId">
+            <summary>
+            Primary key for Culture records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Culture.Name">
+            <summary>
+            Culture description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Culture.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Currency">
+            <summary>
+            Lookup table containing standard ISO currencies.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Currency.CurrencyCode">
+            <summary>
+            The ISO code for the Currency.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Currency.Name">
+            <summary>
+            Currency name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Currency.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.CurrencyRate">
+            <summary>
+            Currency exchange rates.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.CurrencyRateId">
+            <summary>
+            Primary key for CurrencyRate records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.CurrencyRateDate">
+            <summary>
+            Date and time the exchange rate was obtained.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.FromCurrencyCode">
+            <summary>
+            Exchange rate was converted from this currency code.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.ToCurrencyCode">
+            <summary>
+            Exchange rate was converted to this currency code.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.AverageRate">
+            <summary>
+            Average exchange rate for the day.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.EndOfDayRate">
+            <summary>
+            Final exchange rate for the day.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.CurrencyRate.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Customer">
+            <summary>
+            Current customer information. Also see the Person and Store tables.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.CustomerId">
+            <summary>
+            Primary key.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.PersonId">
+            <summary>
+            Foreign key to Person.BusinessEntityID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.StoreId">
+            <summary>
+            Foreign key to Store.BusinessEntityID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.TerritoryId">
+            <summary>
+            ID of the territory in which the customer is located. Foreign key to SalesTerritory.SalesTerritoryID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.AccountNumber">
+            <summary>
+            Unique number identifying the customer assigned by the accounting system.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Customer.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.DatabaseLog">
+            <summary>
+            Audit table tracking all DDL changes made to the AdventureWorks database. Data is captured by the database trigger ddlDatabaseTriggerLog.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.DatabaseLogId">
+            <summary>
+            Primary key for DatabaseLog records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.PostTime">
+            <summary>
+            The date and time the DDL change occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.DatabaseUser">
+            <summary>
+            The user who implemented the DDL change.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.Event">
+            <summary>
+            The type of DDL statement that was executed.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.Schema">
+            <summary>
+            The schema to which the changed object belongs.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.Object">
+            <summary>
+            The object that was changed by the DDL statment.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.Tsql">
+            <summary>
+            The exact Transact-SQL statement that was executed.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.DatabaseLog.XmlEvent">
+            <summary>
+            The raw XML data generated by database trigger.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Department">
+            <summary>
+            Lookup table containing the departments within the Adventure Works Cycles company.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Department.DepartmentId">
+            <summary>
+            Primary key for Department records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Department.Name">
+            <summary>
+            Name of the department.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Department.GroupName">
+            <summary>
+            Name of the group to which the department belongs.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Department.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.EmailAddress">
+            <summary>
+            Where to send a person email.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmailAddress.BusinessEntityId">
+            <summary>
+            Primary key. Person associated with this email address.  Foreign key to Person.BusinessEntityID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmailAddress.EmailAddressId">
+            <summary>
+            Primary key. ID of this email address.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmailAddress.EmailAddress1">
+            <summary>
+            E-mail address for the person.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmailAddress.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmailAddress.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Employee">
+            <summary>
+            Employee information such as salary, department, and title.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.BusinessEntityId">
+            <summary>
+            Primary key for Employee records.  Foreign key to BusinessEntity.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.NationalIdnumber">
+            <summary>
+            Unique national identification number such as a social security number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.LoginId">
+            <summary>
+            Network login.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.OrganizationLevel">
+            <summary>
+            The depth of the employee in the corporate hierarchy.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.JobTitle">
+            <summary>
+            Work title such as Buyer or Sales Representative.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.BirthDate">
+            <summary>
+            Date of birth.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.MaritalStatus">
+            <summary>
+            M = Married, S = Single
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.Gender">
+            <summary>
+            M = Male, F = Female
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.HireDate">
+            <summary>
+            Employee hired on this date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.SalariedFlag">
+            <summary>
+            Job classification. 0 = Hourly, not exempt from collective bargaining. 1 = Salaried, exempt from collective bargaining.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.VacationHours">
+            <summary>
+            Number of available vacation hours.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.SickLeaveHours">
+            <summary>
+            Number of available sick leave hours.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.CurrentFlag">
+            <summary>
+            0 = Inactive, 1 = Active
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Employee.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.EmployeeDepartmentHistory">
+            <summary>
+            Employee department transfers.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeeDepartmentHistory.BusinessEntityId">
+            <summary>
+            Employee identification number. Foreign key to Employee.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeeDepartmentHistory.DepartmentId">
+            <summary>
+            Department in which the employee worked including currently. Foreign key to Department.DepartmentID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeeDepartmentHistory.ShiftId">
+            <summary>
+            Identifies which 8-hour shift the employee works. Foreign key to Shift.Shift.ID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeeDepartmentHistory.StartDate">
+            <summary>
+            Date the employee started work in the department.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeeDepartmentHistory.EndDate">
+            <summary>
+            Date the employee left the department. NULL = Current department.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeeDepartmentHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.EmployeePayHistory">
+            <summary>
+            Employee pay history.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeePayHistory.BusinessEntityId">
+            <summary>
+            Employee identification number. Foreign key to Employee.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeePayHistory.RateChangeDate">
+            <summary>
+            Date the change in pay is effective
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeePayHistory.Rate">
+            <summary>
+            Salary hourly rate.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeePayHistory.PayFrequency">
+            <summary>
+            1 = Salary received monthly, 2 = Salary received biweekly
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.EmployeePayHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ErrorLog">
+            <summary>
+            Audit table tracking errors in the the AdventureWorks database that are caught by the CATCH block of a TRY...CATCH construct. Data is inserted by stored procedure dbo.uspLogError when it is executed from inside the CATCH block of a TRY...CATCH construct.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorLogId">
+            <summary>
+            Primary key for ErrorLog records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorTime">
+            <summary>
+            The date and time at which the error occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.UserName">
+            <summary>
+            The user who executed the batch in which the error occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorNumber">
+            <summary>
+            The error number of the error that occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorSeverity">
+            <summary>
+            The severity of the error that occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorState">
+            <summary>
+            The state number of the error that occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorProcedure">
+            <summary>
+            The name of the stored procedure or trigger where the error occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorLine">
+            <summary>
+            The line number at which the error occurred.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ErrorLog.ErrorMessage">
+            <summary>
+            The message text of the error that occurred.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Illustration">
+            <summary>
+            Bicycle assembly diagrams.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Illustration.IllustrationId">
+            <summary>
+            Primary key for Illustration records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Illustration.Diagram">
+            <summary>
+            Illustrations used in manufacturing instructions. Stored as XML.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Illustration.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.JobCandidate">
+            <summary>
+            Résumés submitted to Human Resources by job applicants.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.JobCandidate.JobCandidateId">
+            <summary>
+            Primary key for JobCandidate records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.JobCandidate.BusinessEntityId">
+            <summary>
+            Employee identification number if applicant was hired. Foreign key to Employee.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.JobCandidate.Resume">
+            <summary>
+            Résumé in XML format.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.JobCandidate.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Location">
+            <summary>
+            Product inventory and manufacturing locations.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Location.LocationId">
+            <summary>
+            Primary key for Location records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Location.Name">
+            <summary>
+            Location description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Location.CostRate">
+            <summary>
+            Standard hourly cost of the manufacturing location.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Location.Availability">
+            <summary>
+            Work capacity (in hours) of the manufacturing location.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Location.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Password">
+            <summary>
+            One way hashed authentication information
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Password.PasswordHash">
+            <summary>
+            Password for the e-mail account.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Password.PasswordSalt">
+            <summary>
+            Random value concatenated with the password string before the password is hashed.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Password.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Password.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Person">
+            <summary>
+            Human beings involved with AdventureWorks: employees, customer contacts, and vendor contacts.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.BusinessEntityId">
+            <summary>
+            Primary key for Person records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.PersonType">
+            <summary>
+            Primary type of person: SC = Store Contact, IN = Individual (retail) customer, SP = Sales person, EM = Employee (non-sales), VC = Vendor contact, GC = General contact
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.NameStyle">
+            <summary>
+            0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.Title">
+            <summary>
+            A courtesy title. For example, Mr. or Ms.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.FirstName">
+            <summary>
+            First name of the person.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.MiddleName">
+            <summary>
+            Middle name or middle initial of the person.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.LastName">
+            <summary>
+            Last name of the person.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.Suffix">
+            <summary>
+            Surname suffix. For example, Sr. or Jr.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.EmailPromotion">
+            <summary>
+            0 = Contact does not wish to receive e-mail promotions, 1 = Contact does wish to receive e-mail promotions from AdventureWorks, 2 = Contact does wish to receive e-mail promotions from AdventureWorks and selected partners. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.AdditionalContactInfo">
+            <summary>
+            Additional contact information about the person stored in xml format. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.Demographics">
+            <summary>
+            Personal information such as hobbies, and income collected from online shoppers. Used for sales analysis.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Person.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.PersonCreditCard">
+            <summary>
+            Cross-reference table mapping people to their credit card information in the CreditCard table. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonCreditCard.BusinessEntityId">
+            <summary>
+            Business entity identification number. Foreign key to Person.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonCreditCard.CreditCardId">
+            <summary>
+            Credit card identification number. Foreign key to CreditCard.CreditCardID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonCreditCard.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.PersonPhone">
+            <summary>
+            Telephone number and type of a person.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonPhone.BusinessEntityId">
+            <summary>
+            Business entity identification number. Foreign key to Person.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonPhone.PhoneNumber">
+            <summary>
+            Telephone number identification number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonPhone.PhoneNumberTypeId">
+            <summary>
+            Kind of phone number. Foreign key to PhoneNumberType.PhoneNumberTypeID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PersonPhone.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.PhoneNumberType">
+            <summary>
+            Type of phone number of a person.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PhoneNumberType.PhoneNumberTypeId">
+            <summary>
+            Primary key for telephone number type records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PhoneNumberType.Name">
+            <summary>
+            Name of the telephone number type
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PhoneNumberType.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Product">
+            <summary>
+            Products sold or used in the manfacturing of sold products.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ProductId">
+            <summary>
+            Primary key for Product records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Name">
+            <summary>
+            Name of the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ProductNumber">
+            <summary>
+            Unique product identification number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.MakeFlag">
+            <summary>
+            0 = Product is purchased, 1 = Product is manufactured in-house.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.FinishedGoodsFlag">
+            <summary>
+            0 = Product is not a salable item. 1 = Product is salable.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Color">
+            <summary>
+            Product color.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.SafetyStockLevel">
+            <summary>
+            Minimum inventory quantity. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ReorderPoint">
+            <summary>
+            Inventory level that triggers a purchase order or work order. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.StandardCost">
+            <summary>
+            Standard cost of the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ListPrice">
+            <summary>
+            Selling price.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Size">
+            <summary>
+            Product size.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.SizeUnitMeasureCode">
+            <summary>
+            Unit of measure for Size column.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.WeightUnitMeasureCode">
+            <summary>
+            Unit of measure for Weight column.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Weight">
+            <summary>
+            Product weight.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.DaysToManufacture">
+            <summary>
+            Number of days required to manufacture the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ProductLine">
+            <summary>
+            R = Road, M = Mountain, T = Touring, S = Standard
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Class">
+            <summary>
+            H = High, M = Medium, L = Low
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Style">
+            <summary>
+            W = Womens, M = Mens, U = Universal
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ProductSubcategoryId">
+            <summary>
+            Product is a member of this product subcategory. Foreign key to ProductSubCategory.ProductSubCategoryID. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ProductModelId">
+            <summary>
+            Product is a member of this product model. Foreign key to ProductModel.ProductModelID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.SellStartDate">
+            <summary>
+            Date the product was available for sale.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.SellEndDate">
+            <summary>
+            Date the product was no longer available for sale.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.DiscontinuedDate">
+            <summary>
+            Date the product was discontinued.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Product.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductCategory">
+            <summary>
+            High-level product categorization.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCategory.ProductCategoryId">
+            <summary>
+            Primary key for ProductCategory records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCategory.Name">
+            <summary>
+            Category description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCategory.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCategory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductCostHistory">
+            <summary>
+            Changes in the cost of a product over time.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCostHistory.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCostHistory.StartDate">
+            <summary>
+            Product cost start date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCostHistory.EndDate">
+            <summary>
+            Product cost end date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCostHistory.StandardCost">
+            <summary>
+            Standard cost of the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductCostHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductDescription">
+            <summary>
+            Product descriptions in several languages.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductDescription.ProductDescriptionId">
+            <summary>
+            Primary key for ProductDescription records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductDescription.Description">
+            <summary>
+            Description of the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductDescription.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductDescription.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductInventory">
+            <summary>
+            Product inventory information.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.LocationId">
+            <summary>
+            Inventory location identification number. Foreign key to Location.LocationID. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.Shelf">
+            <summary>
+            Storage compartment within an inventory location.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.Bin">
+            <summary>
+            Storage container on a shelf in an inventory location.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.Quantity">
+            <summary>
+            Quantity of products in the inventory location.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductInventory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductListPriceHistory">
+            <summary>
+            Changes in the list price of a product over time.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductListPriceHistory.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductListPriceHistory.StartDate">
+            <summary>
+            List price start date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductListPriceHistory.EndDate">
+            <summary>
+            List price end date
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductListPriceHistory.ListPrice">
+            <summary>
+            Product list price.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductListPriceHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductModel">
+            <summary>
+            Product model classification.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModel.ProductModelId">
+            <summary>
+            Primary key for ProductModel records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModel.Name">
+            <summary>
+            Product model description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModel.CatalogDescription">
+            <summary>
+            Detailed product catalog information in xml format.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModel.Instructions">
+            <summary>
+            Manufacturing instructions in xml format.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModel.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModel.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductModelIllustration">
+            <summary>
+            Cross-reference table mapping product models and illustrations.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelIllustration.ProductModelId">
+            <summary>
+            Primary key. Foreign key to ProductModel.ProductModelID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelIllustration.IllustrationId">
+            <summary>
+            Primary key. Foreign key to Illustration.IllustrationID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelIllustration.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductModelProductDescriptionCulture">
+            <summary>
+            Cross-reference table mapping product descriptions and the language the description is written in.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelProductDescriptionCulture.ProductModelId">
+            <summary>
+            Primary key. Foreign key to ProductModel.ProductModelID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelProductDescriptionCulture.ProductDescriptionId">
+            <summary>
+            Primary key. Foreign key to ProductDescription.ProductDescriptionID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelProductDescriptionCulture.CultureId">
+            <summary>
+            Culture identification number. Foreign key to Culture.CultureID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductModelProductDescriptionCulture.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductPhoto">
+            <summary>
+            Product images.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductPhoto.ProductPhotoId">
+            <summary>
+            Primary key for ProductPhoto records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductPhoto.ThumbNailPhoto">
+            <summary>
+            Small image of the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductPhoto.ThumbnailPhotoFileName">
+            <summary>
+            Small image file name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductPhoto.LargePhoto">
+            <summary>
+            Large image of the product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductPhoto.LargePhotoFileName">
+            <summary>
+            Large image file name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductPhoto.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductProductPhoto">
+            <summary>
+            Cross-reference table mapping products and product photos.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductProductPhoto.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductProductPhoto.ProductPhotoId">
+            <summary>
+            Product photo identification number. Foreign key to ProductPhoto.ProductPhotoID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductProductPhoto.Primary">
+            <summary>
+            0 = Photo is not the principal image. 1 = Photo is the principal image.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductProductPhoto.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductReview">
+            <summary>
+            Customer reviews of products they have purchased.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.ProductReviewId">
+            <summary>
+            Primary key for ProductReview records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.ReviewerName">
+            <summary>
+            Name of the reviewer.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.ReviewDate">
+            <summary>
+            Date review was submitted.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.EmailAddress">
+            <summary>
+            Reviewer&apos;s e-mail address.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.Rating">
+            <summary>
+            Product rating given by the reviewer. Scale is 1 to 5 with 5 as the highest rating.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.Comments">
+            <summary>
+            Reviewer&apos;s comments
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductReview.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductSubcategory">
+            <summary>
+            Product subcategories. See ProductCategory table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductSubcategory.ProductSubcategoryId">
+            <summary>
+            Primary key for ProductSubcategory records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductSubcategory.ProductCategoryId">
+            <summary>
+            Product category identification number. Foreign key to ProductCategory.ProductCategoryID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductSubcategory.Name">
+            <summary>
+            Subcategory description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductSubcategory.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductSubcategory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ProductVendor">
+            <summary>
+            Cross-reference table mapping vendors with the products they supply.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.ProductId">
+            <summary>
+            Primary key. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.BusinessEntityId">
+            <summary>
+            Primary key. Foreign key to Vendor.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.AverageLeadTime">
+            <summary>
+            The average span of time (in days) between placing an order with the vendor and receiving the purchased product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.StandardPrice">
+            <summary>
+            The vendor&apos;s usual selling price.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.LastReceiptCost">
+            <summary>
+            The selling price when last purchased.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.LastReceiptDate">
+            <summary>
+            Date the product was last received by the vendor.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.MinOrderQty">
+            <summary>
+            The maximum quantity that should be ordered.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.MaxOrderQty">
+            <summary>
+            The minimum quantity that should be ordered.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.OnOrderQty">
+            <summary>
+            The quantity currently on order.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.UnitMeasureCode">
+            <summary>
+            The product&apos;s unit of measure.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ProductVendor.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.PurchaseOrderDetail">
+            <summary>
+            Individual products associated with a specific purchase order. See PurchaseOrderHeader.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.PurchaseOrderId">
+            <summary>
+            Primary key. Foreign key to PurchaseOrderHeader.PurchaseOrderID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.PurchaseOrderDetailId">
+            <summary>
+            Primary key. One line number per purchased product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.DueDate">
+            <summary>
+            Date the product is expected to be received.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.OrderQty">
+            <summary>
+            Quantity ordered.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.UnitPrice">
+            <summary>
+            Vendor&apos;s selling price of a single product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.LineTotal">
+            <summary>
+            Per product subtotal. Computed as OrderQty * UnitPrice.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.ReceivedQty">
+            <summary>
+            Quantity actually received from the vendor.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.RejectedQty">
+            <summary>
+            Quantity rejected during inspection.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.StockedQty">
+            <summary>
+            Quantity accepted into inventory. Computed as ReceivedQty - RejectedQty.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderDetail.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.PurchaseOrderHeader">
+            <summary>
+            General purchase order information. See PurchaseOrderDetail.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.PurchaseOrderId">
+            <summary>
+            Primary key.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.RevisionNumber">
+            <summary>
+            Incremental number to track changes to the purchase order over time.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.Status">
+            <summary>
+            Order current status. 1 = Pending; 2 = Approved; 3 = Rejected; 4 = Complete
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.EmployeeId">
+            <summary>
+            Employee who created the purchase order. Foreign key to Employee.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.VendorId">
+            <summary>
+            Vendor with whom the purchase order is placed. Foreign key to Vendor.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.ShipMethodId">
+            <summary>
+            Shipping method. Foreign key to ShipMethod.ShipMethodID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.OrderDate">
+            <summary>
+            Purchase order creation date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.ShipDate">
+            <summary>
+            Estimated shipment date from the vendor.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.SubTotal">
+            <summary>
+            Purchase order subtotal. Computed as SUM(PurchaseOrderDetail.LineTotal)for the appropriate PurchaseOrderID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.TaxAmt">
+            <summary>
+            Tax amount.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.Freight">
+            <summary>
+            Shipping cost.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.TotalDue">
+            <summary>
+            Total due to vendor. Computed as Subtotal + TaxAmt + Freight.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.PurchaseOrderHeader.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesOrderDetail">
+            <summary>
+            Individual products associated with a specific sales order. See SalesOrderHeader.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.SalesOrderId">
+            <summary>
+            Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.SalesOrderDetailId">
+            <summary>
+            Primary key. One incremental unique number per product sold.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.CarrierTrackingNumber">
+            <summary>
+            Shipment tracking number supplied by the shipper.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.OrderQty">
+            <summary>
+            Quantity ordered per product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.ProductId">
+            <summary>
+            Product sold to customer. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.SpecialOfferId">
+            <summary>
+            Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.UnitPrice">
+            <summary>
+            Selling price of a single product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.UnitPriceDiscount">
+            <summary>
+            Discount amount.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.LineTotal">
+            <summary>
+            Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderDetail.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesOrderHeader">
+            <summary>
+            General sales order information.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.SalesOrderId">
+            <summary>
+            Primary key.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.RevisionNumber">
+            <summary>
+            Incremental number to track changes to the sales order over time.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.OrderDate">
+            <summary>
+            Dates the sales order was created.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.DueDate">
+            <summary>
+            Date the order is due to the customer.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.ShipDate">
+            <summary>
+            Date the order was shipped to the customer.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.Status">
+            <summary>
+            Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.OnlineOrderFlag">
+            <summary>
+            0 = Order placed by sales person. 1 = Order placed online by customer.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.SalesOrderNumber">
+            <summary>
+            Unique sales order identification number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.PurchaseOrderNumber">
+            <summary>
+            Customer purchase order number reference. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.AccountNumber">
+            <summary>
+            Financial accounting number reference.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.CustomerId">
+            <summary>
+            Customer identification number. Foreign key to Customer.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.SalesPersonId">
+            <summary>
+            Sales person who created the sales order. Foreign key to SalesPerson.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.TerritoryId">
+            <summary>
+            Territory in which the sale was made. Foreign key to SalesTerritory.SalesTerritoryID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.BillToAddressId">
+            <summary>
+            Customer billing address. Foreign key to Address.AddressID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.ShipToAddressId">
+            <summary>
+            Customer shipping address. Foreign key to Address.AddressID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.ShipMethodId">
+            <summary>
+            Shipping method. Foreign key to ShipMethod.ShipMethodID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.CreditCardId">
+            <summary>
+            Credit card identification number. Foreign key to CreditCard.CreditCardID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.CreditCardApprovalCode">
+            <summary>
+            Approval code provided by the credit card company.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.CurrencyRateId">
+            <summary>
+            Currency exchange rate used. Foreign key to CurrencyRate.CurrencyRateID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.SubTotal">
+            <summary>
+            Sales subtotal. Computed as SUM(SalesOrderDetail.LineTotal)for the appropriate SalesOrderID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.TaxAmt">
+            <summary>
+            Tax amount.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.Freight">
+            <summary>
+            Shipping cost.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.TotalDue">
+            <summary>
+            Total due from customer. Computed as Subtotal + TaxAmt + Freight.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.Comment">
+            <summary>
+            Sales representative comments.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeader.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesOrderHeaderSalesReason">
+            <summary>
+            Cross-reference table mapping sales orders to sales reason codes.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeaderSalesReason.SalesOrderId">
+            <summary>
+            Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeaderSalesReason.SalesReasonId">
+            <summary>
+            Primary key. Foreign key to SalesReason.SalesReasonID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesOrderHeaderSalesReason.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesPerson">
+            <summary>
+            Sales representative current information.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.BusinessEntityId">
+            <summary>
+            Primary key for SalesPerson records. Foreign key to Employee.BusinessEntityID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.TerritoryId">
+            <summary>
+            Territory currently assigned to. Foreign key to SalesTerritory.SalesTerritoryID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.SalesQuota">
+            <summary>
+            Projected yearly sales.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.Bonus">
+            <summary>
+            Bonus due if quota is met.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.CommissionPct">
+            <summary>
+            Commision percent received per sale.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.SalesYtd">
+            <summary>
+            Sales total year to date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.SalesLastYear">
+            <summary>
+            Sales total of previous year.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPerson.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesPersonQuotaHistory">
+            <summary>
+            Sales performance tracking.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPersonQuotaHistory.BusinessEntityId">
+            <summary>
+            Sales person identification number. Foreign key to SalesPerson.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPersonQuotaHistory.QuotaDate">
+            <summary>
+            Sales quota date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPersonQuotaHistory.SalesQuota">
+            <summary>
+            Sales quota amount.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPersonQuotaHistory.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesPersonQuotaHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesReason">
+            <summary>
+            Lookup table of customer purchase reasons.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesReason.SalesReasonId">
+            <summary>
+            Primary key for SalesReason records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesReason.Name">
+            <summary>
+            Sales reason description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesReason.ReasonType">
+            <summary>
+            Category the sales reason belongs to.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesReason.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesTaxRate">
+            <summary>
+            Tax rate lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.SalesTaxRateId">
+            <summary>
+            Primary key for SalesTaxRate records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.StateProvinceId">
+            <summary>
+            State, province, or country/region the sales tax applies to.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.TaxType">
+            <summary>
+            1 = Tax applied to retail transactions, 2 = Tax applied to wholesale transactions, 3 = Tax applied to all sales (retail and wholesale) transactions.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.TaxRate">
+            <summary>
+            Tax rate amount.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.Name">
+            <summary>
+            Tax rate description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTaxRate.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesTerritory">
+            <summary>
+            Sales territory lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.TerritoryId">
+            <summary>
+            Primary key for SalesTerritory records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.Name">
+            <summary>
+            Sales territory description
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.CountryRegionCode">
+            <summary>
+            ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.Group">
+            <summary>
+            Geographic area to which the sales territory belong.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.SalesYtd">
+            <summary>
+            Sales in the territory year to date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.SalesLastYear">
+            <summary>
+            Sales in the territory the previous year.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.CostYtd">
+            <summary>
+            Business costs in the territory year to date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.CostLastYear">
+            <summary>
+            Business costs in the territory the previous year.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SalesTerritoryHistory">
+            <summary>
+            Sales representative transfers to other sales territories.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritoryHistory.BusinessEntityId">
+            <summary>
+            Primary key. The sales rep.  Foreign key to SalesPerson.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritoryHistory.TerritoryId">
+            <summary>
+            Primary key. Territory identification number. Foreign key to SalesTerritory.SalesTerritoryID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritoryHistory.StartDate">
+            <summary>
+            Primary key. Date the sales representive started work in the territory.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritoryHistory.EndDate">
+            <summary>
+            Date the sales representative left work in the territory.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritoryHistory.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SalesTerritoryHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ScrapReason">
+            <summary>
+            Manufacturing failure reasons lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ScrapReason.ScrapReasonId">
+            <summary>
+            Primary key for ScrapReason records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ScrapReason.Name">
+            <summary>
+            Failure description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ScrapReason.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Shift">
+            <summary>
+            Work shift lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Shift.ShiftId">
+            <summary>
+            Primary key for Shift records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Shift.Name">
+            <summary>
+            Shift description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Shift.StartTime">
+            <summary>
+            Shift start time.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Shift.EndTime">
+            <summary>
+            Shift end time.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Shift.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ShipMethod">
+            <summary>
+            Shipping company lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShipMethod.ShipMethodId">
+            <summary>
+            Primary key for ShipMethod records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShipMethod.Name">
+            <summary>
+            Shipping company name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShipMethod.ShipBase">
+            <summary>
+            Minimum shipping charge.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShipMethod.ShipRate">
+            <summary>
+            Shipping charge per pound.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShipMethod.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShipMethod.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.ShoppingCartItem">
+            <summary>
+            Contains online customer orders until the order is submitted or cancelled.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShoppingCartItem.ShoppingCartItemId">
+            <summary>
+            Primary key for ShoppingCartItem records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShoppingCartItem.ShoppingCartId">
+            <summary>
+            Shopping cart identification number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShoppingCartItem.Quantity">
+            <summary>
+            Product quantity ordered.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShoppingCartItem.ProductId">
+            <summary>
+            Product ordered. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShoppingCartItem.DateCreated">
+            <summary>
+            Date the time the record was created.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.ShoppingCartItem.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SpecialOffer">
+            <summary>
+            Sale discounts lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.SpecialOfferId">
+            <summary>
+            Primary key for SpecialOffer records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.Description">
+            <summary>
+            Discount description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.DiscountPct">
+            <summary>
+            Discount precentage.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.Type">
+            <summary>
+            Discount type category.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.Category">
+            <summary>
+            Group the discount applies to such as Reseller or Customer.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.StartDate">
+            <summary>
+            Discount start date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.EndDate">
+            <summary>
+            Discount end date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.MinQty">
+            <summary>
+            Minimum discount percent allowed.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.MaxQty">
+            <summary>
+            Maximum discount percent allowed.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOffer.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.SpecialOfferProduct">
+            <summary>
+            Cross-reference table mapping products to special offer discounts.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOfferProduct.SpecialOfferId">
+            <summary>
+            Primary key for SpecialOfferProduct records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOfferProduct.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOfferProduct.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.SpecialOfferProduct.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.StateProvince">
+            <summary>
+            State and province lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.StateProvinceId">
+            <summary>
+            Primary key for StateProvince records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.StateProvinceCode">
+            <summary>
+            ISO standard state or province code.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.CountryRegionCode">
+            <summary>
+            ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode. 
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.IsOnlyStateProvinceFlag">
+            <summary>
+            0 = StateProvinceCode exists. 1 = StateProvinceCode unavailable, using CountryRegionCode.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.Name">
+            <summary>
+            State or province description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.TerritoryId">
+            <summary>
+            ID of the territory in which the state or province is located. Foreign key to SalesTerritory.SalesTerritoryID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.StateProvince.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Store">
+            <summary>
+            Customers (resellers) of Adventure Works products.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Store.BusinessEntityId">
+            <summary>
+            Primary key. Foreign key to Customer.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Store.Name">
+            <summary>
+            Name of the store.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Store.SalesPersonId">
+            <summary>
+            ID of the sales person assigned to the customer. Foreign key to SalesPerson.BusinessEntityID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Store.Demographics">
+            <summary>
+            Demographic informationg about the store such as the number of employees, annual sales and store type.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Store.Rowguid">
+            <summary>
+            ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Store.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.TransactionHistory">
+            <summary>
+            Record of each purchase order, sales order, or work order transaction year to date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.TransactionId">
+            <summary>
+            Primary key for TransactionHistory records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.ReferenceOrderId">
+            <summary>
+            Purchase order, sales order, or work order identification number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.ReferenceOrderLineId">
+            <summary>
+            Line number associated with the purchase order, sales order, or work order.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.TransactionDate">
+            <summary>
+            Date and time of the transaction.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.TransactionType">
+            <summary>
+            W = WorkOrder, S = SalesOrder, P = PurchaseOrder
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.Quantity">
+            <summary>
+            Product quantity.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.ActualCost">
+            <summary>
+            Product cost.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistory.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.TransactionHistoryArchive">
+            <summary>
+            Transactions for previous years.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.TransactionId">
+            <summary>
+            Primary key for TransactionHistoryArchive records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.ReferenceOrderId">
+            <summary>
+            Purchase order, sales order, or work order identification number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.ReferenceOrderLineId">
+            <summary>
+            Line number associated with the purchase order, sales order, or work order.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.TransactionDate">
+            <summary>
+            Date and time of the transaction.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.TransactionType">
+            <summary>
+            W = Work Order, S = Sales Order, P = Purchase Order
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.Quantity">
+            <summary>
+            Product quantity.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.ActualCost">
+            <summary>
+            Product cost.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.TransactionHistoryArchive.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.UnitMeasure">
+            <summary>
+            Unit of measure lookup table.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.UnitMeasure.UnitMeasureCode">
+            <summary>
+            Primary key.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.UnitMeasure.Name">
+            <summary>
+            Unit of measure description.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.UnitMeasure.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.Vendor">
+            <summary>
+            Companies from whom Adventure Works Cycles purchases parts or other goods.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.BusinessEntityId">
+            <summary>
+            Primary key for Vendor records.  Foreign key to BusinessEntity.BusinessEntityID
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.AccountNumber">
+            <summary>
+            Vendor account (identification) number.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.Name">
+            <summary>
+            Company name.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.CreditRating">
+            <summary>
+            1 = Superior, 2 = Excellent, 3 = Above average, 4 = Average, 5 = Below average
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.PreferredVendorStatus">
+            <summary>
+            0 = Do not use if another vendor is available. 1 = Preferred over other vendors supplying the same product.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.ActiveFlag">
+            <summary>
+            0 = Vendor no longer used. 1 = Vendor is actively used.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.PurchasingWebServiceUrl">
+            <summary>
+            Vendor URL.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.Vendor.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.WorkOrder">
+            <summary>
+            Manufacturing work orders.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.WorkOrderId">
+            <summary>
+            Primary key for WorkOrder records.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.ProductId">
+            <summary>
+            Product identification number. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.OrderQty">
+            <summary>
+            Product quantity to build.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.StockedQty">
+            <summary>
+            Quantity built and put in inventory.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.ScrappedQty">
+            <summary>
+            Quantity that failed inspection.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.StartDate">
+            <summary>
+            Work order start date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.EndDate">
+            <summary>
+            Work order end date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.DueDate">
+            <summary>
+            Work order due date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.ScrapReasonId">
+            <summary>
+            Reason for inspection failure.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrder.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+        <member name="T:ChocolateFactory.Models.WorkOrderRouting">
+            <summary>
+            Work order details.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.WorkOrderId">
+            <summary>
+            Primary key. Foreign key to WorkOrder.WorkOrderID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ProductId">
+            <summary>
+            Primary key. Foreign key to Product.ProductID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.OperationSequence">
+            <summary>
+            Primary key. Indicates the manufacturing process sequence.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.LocationId">
+            <summary>
+            Manufacturing location where the part is processed. Foreign key to Location.LocationID.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ScheduledStartDate">
+            <summary>
+            Planned manufacturing start date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ScheduledEndDate">
+            <summary>
+            Planned manufacturing end date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ActualStartDate">
+            <summary>
+            Actual start date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ActualEndDate">
+            <summary>
+            Actual end date.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ActualResourceHrs">
+            <summary>
+            Number of manufacturing hours used.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.PlannedCost">
+            <summary>
+            Estimated manufacturing cost.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ActualCost">
+            <summary>
+            Actual manufacturing cost.
+            </summary>
+        </member>
+        <member name="P:ChocolateFactory.Models.WorkOrderRouting.ModifiedDate">
+            <summary>
+            Date and time the record was last updated.
+            </summary>
+        </member>
+    </members>
+</doc>
