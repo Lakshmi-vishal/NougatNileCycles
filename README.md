@@ -16,7 +16,7 @@ REST API:  RESTful services are designed following best practices and are well-i
 Swagger: Complete documentation of our APIs with Swagger is available, enhancing developer experience and ease of use.
 ![swagger](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/a705a43f-bc63-43fd-bd90-61ad9c169778)
 
-SQL Database: We utilize a structured SQL database for optimal data storage and retrieval, supporting the complex needs of our platform.
+SQL Database: I utilized a structured SQL database for optimal data storage and retrieval, supporting the complex needs of the AdventureWorks platform.
 ![data](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/cb0ebcb0-7a66-472e-8a6a-e77045fea9b6)
 
 Frontend Features: The frontend includes:
