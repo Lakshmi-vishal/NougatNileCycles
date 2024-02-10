@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NNFactory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cad772ca96c250c9665ff3bf58b128e803660dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db08b3f2ad7bf6e12ce5c72cf007b6f09de6fa53")]
 [assembly: System.Reflection.AssemblyProductAttribute("NNFactory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NNFactory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
