@@ -89,6 +89,11 @@ Run the frontend React Development server using following command
 -   npm start
 or
 -   yarn start
+  Swagger UI served at port
+http://localhost:5200/index.html
+To access the endpoints, navigate to 
+http://localhost:5200/api/Products/
+http://localhost:5200/api/ProductDescription/
 5.  **Features**
 Customizable Bicycles
 Product Reviews
