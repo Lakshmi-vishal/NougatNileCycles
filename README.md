@@ -9,7 +9,16 @@ Before you begin, ensure you have met the following requirements:
 - [Node.js](https://nodejs.org/en/) (LTS version recommended)
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (for Windows) or [Visual Studio Code](https://code.visualstudio.com/) (for Windows, Linux, and macOS) with the C# extension installed
 - SQL Server (if your project uses a database)
+## Requirements fullfilled
+In line with our objectives, we have met the following requirements:
 
+REST API: Our RESTful services are designed following best practices and are well-integrated with the frontend, supporting all required functionalities.
+Swagger: Complete documentation of our APIs with Swagger is available, enhancing developer experience and ease of use.
+SQL Database: We utilize a structured SQL database for optimal data storage and retrieval, supporting the complex needs of our platform.
+Frontend Features: The frontend includes:
+Advanced filters for searching and sorting data, allowing users to easily find the products or information they need.
+Interactive tables for displaying data, providing a clear and organized view of product specifications, reviews, and more.
+Additional visual components that enhance the overall user experience, including sliders, dropdowns, and responsive layouts.
 ## Getting Started
 
 
