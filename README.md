@@ -69,15 +69,15 @@ cd nougatnile-cycles
 -  dotnet add package Swashbuckle.AspNetCore
 -   set ASPNETCORE_ENVIRONMENT=Development
 
--  npm install
+-      npm install
 (or) 
--  yarn install
--  npm install axios
--   npm install @mui/material@latest @mui/icons-material@latest
--    npm install @material-ui/core
--    npm install @mui/material @emotion/react @emotion/styled
+-     yarn install
+-      npm install axios
+-     npm install @mui/material@latest @mui/icons-material@latest
+-      npm install @material-ui/core
+-      npm install @mui/material @emotion/react @emotion/styled
 -     npm install react-router-dom
-- npx create-react-app my-app
+-      npx create-react-app my-app
 
 
 3.  **Run the project**
