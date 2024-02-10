@@ -17,6 +17,8 @@ Swagger: Complete documentation of our APIs with Swagger is available, enhancing
 ![swagger](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/a705a43f-bc63-43fd-bd90-61ad9c169778)
 
 SQL Database: We utilize a structured SQL database for optimal data storage and retrieval, supporting the complex needs of our platform.
+![data](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/cb0ebcb0-7a66-472e-8a6a-e77045fea9b6)
+
 Frontend Features: The frontend includes:
 Advanced filters for searching and sorting data, allowing users to easily find the products or information they need.
 Interactive tables for displaying data using material ui, providing a clear and organized view of product specifications, reviews, and more.
