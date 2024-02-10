@@ -1,0 +1,131 @@
+﻿/* MerryComponent.css */
+.componentContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.mediaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.videoContainer {
+    flex: 1;
+    max-width: 320px; /* Adjust based on your preference */
+    margin: 0 auto;
+}
+
+    .videoContainer video {
+        width: 100%;
+        height: auto;
+        border: 2px solid #ccc; /* A subtle border */
+        border-radius: 8px; /* Soft rounded corners */
+        transition: transform 0.3s ease;
+    }
+
+        .videoContainer video:hover {
+            transform: scale(1.05);
+        }
+
+.imageContainer {
+    flex: 1;
+    max-width: 320px; /* Adjust to match the video's width for balance */
+}
+
+    .imageContainer img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Soft rounded corners for the image */
+        transition: transform 0.3s ease;
+    }
+
+        .imageContainer img:hover {
+            transform: scale(1.05);
+        }
+
+.reviewsContainer {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.reviewCard {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+    .reviewCard:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+.productHighlight {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.productTyping {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+    animation: blink-caret 0.8s step-end infinite;
+}
+
+/* Keyframes for blinking caret animation */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+/* Typography enhancements */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Button enhancements */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mediaContainer {
+        flex-direction: column;
+    }
+
+    .videoContainer, .imageContainer {
+        max-width: 100%;
+    }
+}

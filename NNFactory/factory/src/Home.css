@@ -51,3 +51,69 @@
     height: 500px;
     margin-top:30px;
 }
+/* Base styles */
+.grid-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+/* Grid Container Styling */
+.grid-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #f8f9fa; /* Light grey background for the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+    .grid-container .MuiGrid-item { /* Target Material-UI Grid items */
+        padding: 20px;
+    }
+
+    .grid-container .MuiTypography-h5 { /* Styling for the Typography h5 variant */
+        color: #333; /* Darker text for better contrast */
+        margin-bottom: 15px; /* Additional spacing below headings */
+    }
+
+    .grid-container .MuiTypography-body1 { /* Styling for the body text */
+        color: #666; /* Lighter text for readability */
+        line-height: 1.5; /* Improved line spacing for better readability */
+    }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .grid-container {
+        padding: 10px;
+    }
+
+        .grid-container .MuiGrid-item {
+            padding: 10px;
+        }
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .grid-container {
+        padding: 10px;
+    }
+}
