@@ -84,13 +84,14 @@ Online Showroom
 Order Viewing
 Community Engagement
 4.  **Future Enhancements**
-As we stride towards creating the Wide range of cycling products, our roadmap includes several ambitious enhancements:
-
+As the brand stride towards creating the Wide range of cycling products, our roadmap includes several ambitious enhancements:
+In line with  commitment to early and frequent releases as I stick to agile manifesto, I'm excited to announce the availability of a preliminary version of Nougat Nile Cycles. This initial release includes foundational features that allow users to explore bicycle parts, read product reviews, and get a glimpse of our factory outlet.
+ If I would develop this full stack project with some extra features, that I would aim to achieve in next release, I would add the following features in my application.
 Virtual Reality Showroom
-Introduce a VR showroom experience, enabling customers to virtually explore and interact with our bicycles and accessories in a 3D space from anywhere in the world.
+Introduce a VR showroom experience, enabling customers to virtually explore and interact with  bicycles and accessories in a 3D space from anywhere in the world.
 
 Comprehensive Cycling Marketplace
-Expand our platform to include a marketplace feature where third-party vendors can list their cycling-related products, creating a comprehensive catalog of cycling gear and accessories.
+Expand the platform to include a marketplace feature where third-party vendors can list their cycling-related products, creating a comprehensive catalog of cycling gear and accessories.
 
 Community Features
 Ride Sharing: Introduce a feature for cyclists to organize and join group rides, fostering community engagement.
@@ -99,5 +100,3 @@ Cycling Challenges: Launch monthly cycling challenges with rewards to motivate c
 Subscription Services
 Offer premium subscription models providing exclusive benefits such as early access to new products, special discounts, and a premium customer support line.
 
-Mobile Application
-Further Development could be a Nougat Nile Cycles mobile app to provide a seamless shopping and community experience for cyclists on the go.
