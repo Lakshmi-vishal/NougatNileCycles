@@ -25,8 +25,9 @@ Interactive tables for displaying data using material ui, providing a clear and 
 Additional visual components that enhance the overall user experience, including responsive layouts.
 ![nougrat](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/c420c596-7a7c-4586-946f-03b919676ae7)
 ![products](https://github.![feature](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/9dcf1ce8-c06f-4332-8d23-e3cfc3ef716c)
-com/Lakshmi-vishal/ChocolateFactory/assets/84403688/06832d04-8d0a-4064-ab3a-9079323c9d97)
 
+
+![feature](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/15815107-9150-4c60-8ba4-7444f8c5c060)
 
 ## Getting Started
 
