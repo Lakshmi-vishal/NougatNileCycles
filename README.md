@@ -24,9 +24,9 @@ Advanced filters for searching and sorting data, allowing users to easily find t
 Interactive tables for displaying data using material ui, providing a clear and organized view of product specifications, reviews, and more.
 Additional visual components that enhance the overall user experience, including responsive layouts.
 ![nougrat](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/c420c596-7a7c-4586-946f-03b919676ae7)
+![products](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/06832d04-8d0a-4064-ab3a-9079323c9d97)
 
 ![feature](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/acaa3ea3-2d00-485e-adae-542356102cf5)
-![products](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/793397bb-e004-4cb0-b44d-8c02471c3632)
 
 ## Getting Started
 
