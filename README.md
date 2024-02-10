@@ -40,7 +40,7 @@ git clone https://github.com/Lakshmi-vishal/ChocolateFactory.git
 2.  **Navigate to the project directory**
 
 
-cd nougatnile-cycles
+-    cd ChocolateFactory
 
 3.  **Install dependencies**
 
