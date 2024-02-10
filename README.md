@@ -46,28 +46,28 @@ cd nougatnile-cycles
 
 
 
-- dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+-       dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
-- dotnet add package Microsoft.EntityFrameworkCore.Design
+-       dotnet add package Microsoft.EntityFrameworkCore.Design
 
--  dotnet ef dbcontext scaffold "Server=VH_LVH;Database=AdventureWorks2022;;Integrated Security=true;" 
+-     dotnet ef dbcontext scaffold "Server=VH_LVH;Database=AdventureWorks2022;;Integrated Security=true;" 
 
--   Microsoft.EntityFrameworkCore.SqlServer -o Models
+-      Microsoft.EntityFrameworkCore.SqlServer -o Models
 
--  dotnet ef migrations add InitialCreate
+-      dotnet ef migrations add InitialCreate
 
--  dotnet ef database update --context AppDbContext
+-      dotnet ef database update --context AppDbContext
 
--   Update-Database -Context AppDbContext
+-      Update-Database -Context AppDbContext
 
--   dotnet ef migrations add InitialCreate --context AppDbContext
+-      dotnet ef migrations add InitialCreate --context AppDbContext
 
--  dotnet tool install --global dotnet-aspnet-codegenerator
+-      dotnet tool install --global dotnet-aspnet-codegenerator
 
--  dotnet add package Microsoft.EntityFrameworkCore.Tools
+-       dotnet add package Microsoft.EntityFrameworkCore.Tools
 
--  dotnet add package Swashbuckle.AspNetCore
--   set ASPNETCORE_ENVIRONMENT=Development
+-       dotnet add package Swashbuckle.AspNetCore
+-       set ASPNETCORE_ENVIRONMENT=Development
 
 -      npm install
 (or) 
