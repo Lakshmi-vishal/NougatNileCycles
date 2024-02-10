@@ -35,12 +35,12 @@ Additional visual components that enhance the overall user experience, including
 
 1. **Clone the repository**
 
-git clone https://github.com/Lakshmi-vishal/ChocolateFactory.git
+git clone https://github.com/Lakshmi-vishal/NougatNileCycles.git
 
 2.  **Navigate to the project directory**
 
 
--    cd ChocolateFactory
+-    cd NougatNileCycles
 
 3.  **Install dependencies**
 
@@ -82,7 +82,8 @@ git clone https://github.com/Lakshmi-vishal/ChocolateFactory.git
 
 3.  **Run the project**
 Run the backend Asp.net using command
--      cd ChocolateFactory/ChocolateFactory
+-      cd NougatNileCycles/NNFactory
+  
  -     dotnet run --urls "https://localhost:5201;http://localhost:5200"
 Run the frontend React Development server using following command
 -   cd factory 
