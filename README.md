@@ -8,7 +8,7 @@ Before you begin, ensure you have met the following requirements:
 - [.NET 5.0 SDK](https://dotnet.microsoft.com/download) or higher
 - [Node.js](https://nodejs.org/en/) (LTS version recommended)
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) (for Windows) or [Visual Studio Code](https://code.visualstudio.com/) (for Windows, Linux, and macOS) with the C# extension installed
-- SQL Server (if your project uses a database)
+- SQL Server (Microsoft SQL Server Management Studio)
 ## Requirements fullfilled
 In line with our objectives, we have met the following requirements:
 
