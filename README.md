@@ -14,6 +14,8 @@ In line with our objectives, we have met the following requirements:
 
 REST API:  RESTful services are designed following best practices and are well-integrated with the frontend, supporting all required functionalities.
 Swagger: Complete documentation of our APIs with Swagger is available, enhancing developer experience and ease of use.
+![swagger](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/a705a43f-bc63-43fd-bd90-61ad9c169778)
+
 SQL Database: We utilize a structured SQL database for optimal data storage and retrieval, supporting the complex needs of our platform.
 Frontend Features: The frontend includes:
 Advanced filters for searching and sorting data, allowing users to easily find the products or information they need.
