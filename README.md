@@ -77,18 +77,19 @@ cd nougatnile-cycles
 -      npm install @material-ui/core
 -      npm install @mui/material @emotion/react @emotion/styled
 -     npm install react-router-dom
--      npx create-react-app my-app
+-      npx create-react-app factory
 
 
 3.  **Run the project**
 Run the backend Asp.net using command
- dotnet run --urls "https://localhost:5201;http://localhost:5200"
+-      cd ChocolateFactory/ChocolateFactory
+ -     dotnet run --urls "https://localhost:5201;http://localhost:5200"
 Run the frontend React Development server using following command
-cd factory 
-npm start
+-   cd factory 
+-   npm start
 or
-yarn start
-4.  **Features**
+-   yarn start
+5.  **Features**
 Customizable Bicycles
 Product Reviews
 Online Showroom
