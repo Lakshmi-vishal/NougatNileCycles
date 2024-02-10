@@ -21,6 +21,8 @@ Frontend Features: The frontend includes:
 Advanced filters for searching and sorting data, allowing users to easily find the products or information they need.
 Interactive tables for displaying data using material ui, providing a clear and organized view of product specifications, reviews, and more.
 Additional visual components that enhance the overall user experience, including responsive layouts.
+![nougrat](https://github.com/Lakshmi-vishal/ChocolateFactory/assets/84403688/66b6c714-ef06-432b-a432-567f627ef7bf)
+
 ## Getting Started
 
 
