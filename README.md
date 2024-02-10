@@ -23,15 +23,18 @@ git clone https://github.com/Lakshmi-vishal/ChocolateFactory.git
 
 
 cd nougatnile-cycles
-Install dependencies:
+
+3.  **Install dependencies**
 
 
 npm install
 or 
 yarn install
 
-Start the development server:
-
+3.  **Run the project**
+Run the backend Asp.net using command
+ dotnet run --urls "https://localhost:5201;http://localhost:5200"
+Run the frontend React Development server using following command
 npm start
 or
 yarn start
