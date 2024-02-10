@@ -48,7 +48,7 @@ const MerryComponent = () => {
             </div>
             <div className="mediaContainer">
                 <div className="videoContainer">
-                    <video ref={videoRef} src="Dream1.mp4" type="video/mp4" muted loop></video>
+                    <video ref={videoRef} src="EB.mp4" type="video/mp4" muted loop></video>
                 </div>
             </div>
             <h4 style={{ textAlign: 'center', margin: '20px 0' }}>What Our Clients Feel About Our Product</h4>
