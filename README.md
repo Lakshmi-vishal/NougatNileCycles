@@ -35,12 +35,12 @@ Additional visual components that enhance the overall user experience, including
 
 1. **Clone the repository**
 
-git clone https://github.com/Lakshmi-vishal/ChocolateFactory.git
+git clone https://github.com/Lakshmi-vishal/NougatNileCycles.git
 
 2.  **Navigate to the project directory**
 
 
--    cd ChocolateFactory
+-    cd NougatNileCycles
 
 3.  **Install dependencies**
 
@@ -82,7 +82,8 @@ git clone https://github.com/Lakshmi-vishal/ChocolateFactory.git
 
 3.  **Run the project**
 Run the backend Asp.net using command
--      cd ChocolateFactory/ChocolateFactory
+-      cd NougatNileCycles/NNFactory
+  
  -     dotnet run --urls "https://localhost:5201;http://localhost:5200"
 Run the frontend React Development server using following command
 -   cd factory 
@@ -116,4 +117,6 @@ Events and Workshops: Host virtual cycling events, workshops, and webinars with 
 Cycling Challenges: Launch monthly cycling challenges with rewards to motivate cyclists to achieve their fitness goals.
 Subscription Services
 Offer premium subscription models providing exclusive benefits such as early access to new products, special discounts, and a premium customer support line.
-
+4.  **Author**
+lakshmivishalhayagrivan  
+LinkedIn url: https://www.linkedin.com/in/lakshmi-vh/
