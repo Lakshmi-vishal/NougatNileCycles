@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -18,6 +18,8 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -65,7 +67,7 @@ const ProductList = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState({});
-    const [error, setError] = useState('');
+    const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
     const [filter, setFilter] = useState('');
 
     useEffect(() => {
@@ -74,11 +76,45 @@ const ProductList = () => {
                 const response = await axios.get('http://localhost:5200/api/Products/');
                 setProducts(response.data);
             } catch (error) {
-                setError('Failed to fetch products');
+                console.error('Failed to fetch products', error);
             }
         };
         fetchProducts();
     }, []);
+
+    const requestSort = (key) => {
+        let direction = 'asc';
+        if (sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+        setSortConfig({ key, direction });
+    };
+
+    const sortedProducts = useMemo(() => {
+        let sortableProducts = [...products];
+        if (sortConfig.key) {
+            sortableProducts.sort((a, b) => {
+                if (a[sortConfig.key] < b[sortConfig.key]) {
+                    return sortConfig.direction === 'asc' ? -1 : 1;
+                }
+                if (a[sortConfig.key] > b[sortConfig.key]) {
+                    return sortConfig.direction === 'asc' ? 1 : -1;
+                }
+                return 0;
+            });
+        }
+        return sortableProducts;
+    }, [products, sortConfig]);
+
+    const filteredProducts = useMemo(() => {
+        return sortedProducts.filter((product) =>
+            product.name.toLowerCase().includes(filter)
+        );
+    }, [sortedProducts, filter]);
+
+    const handleFilterChange = (event) => {
+        setFilter(event.target.value.toLowerCase());
+    };
 
     const addToCart = (productId) => {
         setCart((currentCart) => {
@@ -99,23 +135,11 @@ const ProductList = () => {
         });
     };
 
-    const handleFilterChange = (event) => {
-        setFilter(event.target.value.toLowerCase());
-    };
-
-    const filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(filter)
-    );
-
-    if (error) {
-        return <Typography color="error">{`Error: ${error}`}</Typography>;
-    }
-
     return (
         <>
             <div className={classes.toolbar}>
                 <div className={classes.leftToolbar}>
-                    <IconButton onClick={() => navigate('/')} color="inherit">
+                    <IconButton onClick={() => navigate(-1)} color="inherit">
                         <ArrowBackIcon />
                     </IconButton>
                     <TextField
@@ -136,10 +160,30 @@ const ProductList = () => {
                 <Table className={classes.table} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell className={classes.tableHeaderCell}>Product ID</TableCell>
-                            <TableCell className={classes.tableHeaderCell}>Name</TableCell>
-                            <TableCell className={classes.tableHeaderCell}>Product Number</TableCell>
-                            <TableCell className={classes.tableHeaderCell}>Quantity</TableCell>
+                            <TableCell className={classes.tableHeaderCell}>
+                                Product ID
+                                <IconButton onClick={() => requestSort('productId')} size="small">
+                                    {sortConfig.key === 'productId' && sortConfig.direction === 'asc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+                                </IconButton>
+                            </TableCell>
+                            <TableCell className={classes.tableHeaderCell}>
+                                Name
+                                <IconButton onClick={() => requestSort('name')} size="small">
+                                    {sortConfig.key === 'name' && sortConfig.direction === 'asc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+                                </IconButton>
+                            </TableCell>
+                            <TableCell className={classes.tableHeaderCell}>
+                                Product Number
+                                <IconButton onClick={() => requestSort('productNumber')} size="small">
+                                    {sortConfig.key === 'productNumber' && sortConfig.direction === 'asc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+                                </IconButton>
+                            </TableCell>
+                            <TableCell className={classes.tableHeaderCell}>
+                                Quantity
+                                <IconButton onClick={() => requestSort('quantity')} size="small">
+                                    {sortConfig.key === 'quantity' && sortConfig.direction === 'asc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+                                </IconButton>
+                            </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
